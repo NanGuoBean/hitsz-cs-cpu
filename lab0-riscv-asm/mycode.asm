@@ -14,6 +14,14 @@ judgeopt:			#split switch to number, then jump to the option by opt number
 	srli   s0,s0,13
 	andi s6,s0,0xFF	# get opt num
 	
+	addi a1,x0,0x80
+	addi a2,x0,-256
+ 	blt s4, a1, L1
+	ori s4, s4, -256
+L1: 
+ 	blt s5, s1 ,L2
+ 	ori s5, s5, -256
+L2:
 	andi s0,s0,0
 
 	addi s0,s0,1		# A+B
