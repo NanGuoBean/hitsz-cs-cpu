@@ -73,7 +73,7 @@ optlm:
 	sll	 s0,s4,s5
 	jal	 showled
 optrm:
-	srl	 s0,s4,s5
+	sra	 s0,s4,s5
 	jal	 showled
 	
 optmul: # booth algorithm
