@@ -5,6 +5,7 @@ initialize:			# Initialize them
 	andi s3,s3,0
     addi s2,s1,0x70  # switch loc
     addi s3,s1,0x60  # led loc
+
 judgeopt:			#split switch to number, then jump to the option by opt number
 	
 	lw	 s0,0x00(s2)	 # read switch
@@ -14,15 +15,20 @@ judgeopt:			#split switch to number, then jump to the option by opt number
 	srli   s0,s0,13
 	andi s6,s0,0xFF	# get opt num
 	
-	addi a1,x0,0x80
-	addi a2,x0,-256
- 	blt s4, a1, L1
-	ori s4, s4, -256
+ 	addi s0,x0,0x80
+  	blt s4, s0, L1
+	# change to ~x +1 and 16bits
+ 	ori s4, s4, -256
+	xori s4,s4,0x7F
+	addi s4,s4,1
 L1: 
- 	blt s5, s1 ,L2
- 	ori s5, s5, -256
+    blt s5, s0 ,L2
+	# change to ~x +1 and 16bits
+    ori s5, s5, -256
+	xori s5,s5,0x7F
+	addi s5,s5,1
 L2:
-	andi s0,s0,0
+	addi s0,x0,0
 
 	addi s0,s0,1		# A+B
 	beq  s6,s0,optadd
@@ -70,16 +76,28 @@ optrm:
 	srl	 s0,s4,s5
 	jal	 showled
 	
-optmul:
-	andi s0,s0,0
-	andi s7,s7,0
-	andi s8,s8,1
-mulcase0:
-	beq  s4,s7, showled # equal 0 means ok
-	andi s9, s4, 1		# lastnumber
-	srli	 s4, s4, 1		# A/2
-	beq	 s9,s7, mulcase1 # equal to 0, skip add
-	add  s0,s5,s0
-mulcase1:
-	slli	 s5,s5,1		# B*2
-	jal mulcase0	
+optmul: # booth algorithm
+ addi s7, x0, 8 
+
+ addi s9 ,x0, 1		# 01
+ addi s10 ,x0, 2	# 10
+
+ addi s0, x0, 0
+ slli s4, s4, 8
+ slli s5, s5, 1 # add 0
+ for:
+  addi s7, s7, -1
+  beq s7, x0, forend
+  andi s8, s5, 3 
+  bne s9 , s8, else1  
+  add s0, s0, s4
+  else1:
+  bne s8, s10, else2
+  sub s0, s0, s4
+  else2:
+  srai s0, s0, 1
+  srai s5, s5, 1
+  jal for
+ forend:
+ srai s0, s0, 1
+ jal showled
