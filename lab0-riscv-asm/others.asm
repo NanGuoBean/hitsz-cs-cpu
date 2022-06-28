@@ -51,7 +51,7 @@ suboperation:
 
 andoperation:
  and a5, a1, a2
- j L3
+ j L3 
 
 oroperation:
  or a5, a1, a2
