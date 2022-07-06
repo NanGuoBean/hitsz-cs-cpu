@@ -12,11 +12,11 @@ module RF_mux(
 
 always@(*) begin
     case(wd_sel) 
-        0: wD = pc4;
-        1: wD = alu;
-        2: wD = sext;
-        3: wD = dram;
-        4: wD = sext2;
+        RF_MUX_pc4: wD = pc4;
+        RF_MUX_alu: wD = alu;
+        RF_MUX_sext: wD = sext;
+        RF_MUX_dram: wD = dram;
+        RF_MUX_sext2: wD = sext2;
     endcase
 end
 endmodule

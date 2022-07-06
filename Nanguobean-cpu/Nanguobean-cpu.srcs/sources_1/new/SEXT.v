@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+d`timescale 1ns / 1ps
 
 module SEXT(
     input [31:0] din,
@@ -9,9 +9,11 @@ module SEXT(
 always@(*) begin
     case(din[6:0])
         7'b0010011, 7'b0000011,7'b1100111: begin //I-type
-            if(din[31] == 1)
-                ext = {20'hfffff,din[31:20]};
-            else ext =  {20'h0,din[31:20]};
+            if( (din[14:12] == 'b001) or (din[14:12] == 'b101))
+                ext = { 27'h0, din[24:20] }; //shamt
+            else 
+                if(din[31] == 1) ext = {20'hfffff,din[31:20]};
+                else ext =  {20'h0,din[31:20]};
         end
         7'b0100011: begin//S-type
             if(din[31] == 1)

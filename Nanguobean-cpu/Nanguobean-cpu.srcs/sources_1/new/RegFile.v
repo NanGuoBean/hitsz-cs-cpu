@@ -2,7 +2,7 @@
 
 module RegFile(
     input clk,              
-    //input immres,           //立即数直接写入信�?
+    //input immres,           //立即数直接写入?
     input [4:0] rR1,        
     input [4:0] rR2,        
     input [4:0] wR,         

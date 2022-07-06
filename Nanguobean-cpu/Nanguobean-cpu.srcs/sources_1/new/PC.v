@@ -2,7 +2,6 @@
 
 /*
     update at posedge of clk
-
 */
 module PC(
     input clk,
