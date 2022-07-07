@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v" --include "../../../../Nanguobean-cpu.srcs/sources_1/ip/cpuclk" --include "../../../../Nanguobean-cpu.srcs/sources_1/new" \
+"../../../../Nanguobean-cpu.srcs/sources_1/ip/prgrom/sim/prgrom.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/ip/dram/sim/dram.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/ALU.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/ALU_mux.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/DRAM.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/IROM.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/NPC.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/PC.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/RF_mux.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/RegFile.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/SEXT.v" \
+"../../../../Nanguobean-cpu.srcs/sources_1/new/CPU.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

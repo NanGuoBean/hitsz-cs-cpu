@@ -1,15 +1,243 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Jul  4 10:22:34 2022
+-- Date        : Wed Jul  6 22:18:43 2022
 -- Host        : watson running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top prgrom -prefix
---               prgrom_ IROM_sim_netlist.vhdl
--- Design      : IROM
+-- Command     : write_vhdl -force -mode funcsim
+--               D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/prgrom_sim_netlist.vhdl
+-- Design      : prgrom
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a100tfgg484-1
 -- --------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity prgrom_rom is
+  port (
+    spo : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    a : in STD_LOGIC_VECTOR ( 13 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of prgrom_rom : entity is "rom";
+end prgrom_rom;
+
+architecture STRUCTURE of prgrom_rom is
+  signal \spo[31]_INST_0_i_1_n_0\ : STD_LOGIC;
+  signal \spo[31]_INST_0_i_2_n_0\ : STD_LOGIC;
+  signal \spo[31]_INST_0_i_3_n_0\ : STD_LOGIC;
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \spo[17]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \spo[26]_INST_0\ : label is "soft_lutpair0";
+begin
+\spo[0]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00004000"
+    )
+        port map (
+      I0 => a(2),
+      I1 => \spo[31]_INST_0_i_3_n_0\,
+      I2 => \spo[31]_INST_0_i_2_n_0\,
+      I3 => \spo[31]_INST_0_i_1_n_0\,
+      I4 => a(0),
+      O => spo(1)
+    );
+\spo[10]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"4000400000004000"
+    )
+        port map (
+      I0 => a(2),
+      I1 => \spo[31]_INST_0_i_3_n_0\,
+      I2 => \spo[31]_INST_0_i_2_n_0\,
+      I3 => \spo[31]_INST_0_i_1_n_0\,
+      I4 => a(0),
+      I5 => a(1),
+      O => spo(2)
+    );
+\spo[12]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000400040004000"
+    )
+        port map (
+      I0 => a(2),
+      I1 => \spo[31]_INST_0_i_3_n_0\,
+      I2 => \spo[31]_INST_0_i_2_n_0\,
+      I3 => \spo[31]_INST_0_i_1_n_0\,
+      I4 => a(1),
+      I5 => a(0),
+      O => spo(9)
+    );
+\spo[17]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"40000000"
+    )
+        port map (
+      I0 => a(1),
+      I1 => \spo[31]_INST_0_i_3_n_0\,
+      I2 => \spo[31]_INST_0_i_2_n_0\,
+      I3 => \spo[31]_INST_0_i_1_n_0\,
+      I4 => a(2),
+      O => spo(4)
+    );
+\spo[18]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000040000000"
+    )
+        port map (
+      I0 => a(2),
+      I1 => \spo[31]_INST_0_i_3_n_0\,
+      I2 => \spo[31]_INST_0_i_2_n_0\,
+      I3 => \spo[31]_INST_0_i_1_n_0\,
+      I4 => a(0),
+      I5 => a(1),
+      O => spo(5)
+    );
+\spo[23]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"4000000000000000"
+    )
+        port map (
+      I0 => a(2),
+      I1 => \spo[31]_INST_0_i_3_n_0\,
+      I2 => \spo[31]_INST_0_i_2_n_0\,
+      I3 => \spo[31]_INST_0_i_1_n_0\,
+      I4 => a(1),
+      I5 => a(0),
+      O => spo(6)
+    );
+\spo[26]_INST_0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"70000000"
+    )
+        port map (
+      I0 => a(1),
+      I1 => a(2),
+      I2 => \spo[31]_INST_0_i_3_n_0\,
+      I3 => \spo[31]_INST_0_i_2_n_0\,
+      I4 => \spo[31]_INST_0_i_1_n_0\,
+      O => spo(7)
+    );
+\spo[27]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"400080000000C000"
+    )
+        port map (
+      I0 => a(2),
+      I1 => \spo[31]_INST_0_i_3_n_0\,
+      I2 => \spo[31]_INST_0_i_2_n_0\,
+      I3 => \spo[31]_INST_0_i_1_n_0\,
+      I4 => a(1),
+      I5 => a(0),
+      O => spo(8)
+    );
+\spo[29]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000020000"
+    )
+        port map (
+      I0 => \spo[31]_INST_0_i_1_n_0\,
+      I1 => a(13),
+      I2 => a(3),
+      I3 => a(4),
+      I4 => \spo[31]_INST_0_i_3_n_0\,
+      I5 => a(2),
+      O => spo(10)
+    );
+\spo[2]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"40000000B0000000"
+    )
+        port map (
+      I0 => a(1),
+      I1 => a(0),
+      I2 => \spo[31]_INST_0_i_1_n_0\,
+      I3 => \spo[31]_INST_0_i_2_n_0\,
+      I4 => \spo[31]_INST_0_i_3_n_0\,
+      I5 => a(2),
+      O => spo(3)
+    );
+\spo[31]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"3000000080000000"
+    )
+        port map (
+      I0 => a(0),
+      I1 => a(1),
+      I2 => \spo[31]_INST_0_i_1_n_0\,
+      I3 => \spo[31]_INST_0_i_2_n_0\,
+      I4 => \spo[31]_INST_0_i_3_n_0\,
+      I5 => a(2),
+      O => spo(11)
+    );
+\spo[31]_INST_0_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => a(12),
+      I1 => a(11),
+      I2 => a(10),
+      I3 => a(9),
+      O => \spo[31]_INST_0_i_1_n_0\
+    );
+\spo[31]_INST_0_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => a(4),
+      I1 => a(3),
+      I2 => a(13),
+      O => \spo[31]_INST_0_i_2_n_0\
+    );
+\spo[31]_INST_0_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0001"
+    )
+        port map (
+      I0 => a(8),
+      I1 => a(7),
+      I2 => a(6),
+      I3 => a(5),
+      O => \spo[31]_INST_0_i_3_n_0\
+    );
+\spo[4]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000004000"
+    )
+        port map (
+      I0 => a(0),
+      I1 => \spo[31]_INST_0_i_1_n_0\,
+      I2 => \spo[31]_INST_0_i_2_n_0\,
+      I3 => \spo[31]_INST_0_i_3_n_0\,
+      I4 => a(2),
+      I5 => a(1),
+      O => spo(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity prgrom_dist_mem_gen_v8_0_12_synth is
+  port (
+    spo : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    a : in STD_LOGIC_VECTOR ( 13 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of prgrom_dist_mem_gen_v8_0_12_synth : entity is "dist_mem_gen_v8_0_12_synth";
+end prgrom_dist_mem_gen_v8_0_12_synth;
+
+architecture STRUCTURE of prgrom_dist_mem_gen_v8_0_12_synth is
+begin
+\gen_rom.rom_inst\: entity work.prgrom_rom
+     port map (
+      a(13 downto 0) => a(13 downto 0),
+      spo(11 downto 0) => spo(11 downto 0)
+    );
+end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
@@ -77,7 +305,7 @@ entity prgrom_dist_mem_gen_v8_0_12 is
   attribute C_HAS_WE : integer;
   attribute C_HAS_WE of prgrom_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_MEM_INIT_FILE : string;
-  attribute C_MEM_INIT_FILE of prgrom_dist_mem_gen_v8_0_12 : entity is "no_coe_file_loaded";
+  attribute C_MEM_INIT_FILE of prgrom_dist_mem_gen_v8_0_12 : entity is "prgrom.mif";
   attribute C_MEM_TYPE : integer;
   attribute C_MEM_TYPE of prgrom_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_PARSER_TYPE : integer;
@@ -89,7 +317,7 @@ entity prgrom_dist_mem_gen_v8_0_12 is
   attribute C_QUALIFY_WE : integer;
   attribute C_QUALIFY_WE of prgrom_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_READ_MIF : integer;
-  attribute C_READ_MIF of prgrom_dist_mem_gen_v8_0_12 : entity is 0;
+  attribute C_READ_MIF of prgrom_dist_mem_gen_v8_0_12 : entity is 1;
   attribute C_REG_A_D_INPUTS : integer;
   attribute C_REG_A_D_INPUTS of prgrom_dist_mem_gen_v8_0_12 : entity is 0;
   attribute C_REG_DPRA_INPUT : integer;
@@ -98,10 +326,13 @@ entity prgrom_dist_mem_gen_v8_0_12 is
   attribute C_SYNC_ENABLE of prgrom_dist_mem_gen_v8_0_12 : entity is 1;
   attribute C_WIDTH : integer;
   attribute C_WIDTH of prgrom_dist_mem_gen_v8_0_12 : entity is 32;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of prgrom_dist_mem_gen_v8_0_12 : entity is "dist_mem_gen_v8_0_12";
 end prgrom_dist_mem_gen_v8_0_12;
 
 architecture STRUCTURE of prgrom_dist_mem_gen_v8_0_12 is
   signal \<const0>\ : STD_LOGIC;
+  signal \^spo\ : STD_LOGIC_VECTOR ( 31 downto 7 );
 begin
   dpo(31) <= \<const0>\;
   dpo(30) <= \<const0>\;
@@ -199,41 +430,47 @@ begin
   qspo(2) <= \<const0>\;
   qspo(1) <= \<const0>\;
   qspo(0) <= \<const0>\;
-  spo(31) <= \<const0>\;
+  spo(31) <= \^spo\(31);
   spo(30) <= \<const0>\;
-  spo(29) <= \<const0>\;
-  spo(28) <= \<const0>\;
-  spo(27) <= \<const0>\;
-  spo(26) <= \<const0>\;
-  spo(25) <= \<const0>\;
-  spo(24) <= \<const0>\;
-  spo(23) <= \<const0>\;
+  spo(29 downto 25) <= \^spo\(29 downto 25);
+  spo(24) <= \^spo\(25);
+  spo(23) <= \^spo\(25);
   spo(22) <= \<const0>\;
-  spo(21) <= \<const0>\;
-  spo(20) <= \<const0>\;
-  spo(19) <= \<const0>\;
-  spo(18) <= \<const0>\;
-  spo(17) <= \<const0>\;
-  spo(16) <= \<const0>\;
-  spo(15) <= \<const0>\;
-  spo(14) <= \<const0>\;
-  spo(13) <= \<const0>\;
-  spo(12) <= \<const0>\;
-  spo(11) <= \<const0>\;
-  spo(10) <= \<const0>\;
-  spo(9) <= \<const0>\;
-  spo(8) <= \<const0>\;
-  spo(7) <= \<const0>\;
-  spo(6) <= \<const0>\;
-  spo(5) <= \<const0>\;
-  spo(4) <= \<const0>\;
-  spo(3) <= \<const0>\;
-  spo(2) <= \<const0>\;
-  spo(1) <= \<const0>\;
-  spo(0) <= \<const0>\;
+  spo(21) <= \^spo\(21);
+  spo(20) <= \^spo\(21);
+  spo(19) <= \^spo\(21);
+  spo(18) <= \^spo\(21);
+  spo(17 downto 16) <= \^spo\(17 downto 16);
+  spo(15) <= \^spo\(28);
+  spo(14) <= \^spo\(28);
+  spo(13) <= \^spo\(28);
+  spo(12) <= \^spo\(28);
+  spo(11) <= \^spo\(11);
+  spo(10) <= \^spo\(11);
+  spo(9) <= \^spo\(9);
+  spo(8) <= \^spo\(9);
+  spo(7) <= \^spo\(7);
+  spo(6) <= \^spo\(7);
+  spo(5) <= \^spo\(7);
+  spo(4) <= \^spo\(7);
+  spo(3) <= \^spo\(9);
+  spo(2) <= \^spo\(16);
+  spo(1) <= \^spo\(9);
+  spo(0) <= \^spo\(9);
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
+    );
+\synth_options.dist_mem_inst\: entity work.prgrom_dist_mem_gen_v8_0_12_synth
+     port map (
+      a(13 downto 0) => a(13 downto 0),
+      spo(11) => \^spo\(31),
+      spo(10 downto 6) => \^spo\(29 downto 25),
+      spo(5) => \^spo\(21),
+      spo(4 downto 3) => \^spo\(17 downto 16),
+      spo(2) => \^spo\(11),
+      spo(1) => \^spo\(9),
+      spo(0) => \^spo\(7)
     );
 end STRUCTURE;
 library IEEE;
@@ -248,7 +485,7 @@ entity prgrom is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of prgrom : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of prgrom : entity is "IROM,dist_mem_gen_v8_0_12,{}";
+  attribute CHECK_LICENSE_TYPE of prgrom : entity is "prgrom,dist_mem_gen_v8_0_12,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of prgrom : entity is "yes";
   attribute x_core_info : string;
@@ -312,11 +549,11 @@ architecture STRUCTURE of prgrom is
   attribute c_has_spo : integer;
   attribute c_has_spo of U0 : label is 1;
   attribute c_mem_init_file : string;
-  attribute c_mem_init_file of U0 : label is "no_coe_file_loaded";
+  attribute c_mem_init_file of U0 : label is "prgrom.mif";
   attribute c_parser_type : integer;
   attribute c_parser_type of U0 : label is 1;
   attribute c_read_mif : integer;
-  attribute c_read_mif of U0 : label is 0;
+  attribute c_read_mif of U0 : label is 1;
   attribute c_reg_a_d_inputs : integer;
   attribute c_reg_a_d_inputs of U0 : label is 0;
   attribute c_sync_enable : integer;

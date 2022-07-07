@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Jul  4 09:53:21 2022
+-- Date        : Wed Jul  6 21:46:33 2022
 -- Host        : watson running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/self-inbox/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
+--               D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.vhdl
 -- Design      : cpuclk
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,7 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity cpuclk_cpuclk_clk_wiz is
   port (
-    clk_out1 : out STD_LOGIC;
+    clk_out : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -26,7 +26,7 @@ end cpuclk_cpuclk_clk_wiz;
 
 architecture STRUCTURE of cpuclk_cpuclk_clk_wiz is
   signal clk_in1_cpuclk : STD_LOGIC;
-  signal clk_out1_cpuclk : STD_LOGIC;
+  signal clk_out_cpuclk : STD_LOGIC;
   signal clkfbout_buf_cpuclk : STD_LOGIC;
   signal clkfbout_cpuclk : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED : STD_LOGIC;
@@ -63,8 +63,8 @@ clkin1_ibufg: unisim.vcomponents.IBUF
     );
 clkout1_buf: unisim.vcomponents.BUFG
      port map (
-      I => clk_out1_cpuclk,
-      O => clk_out1
+      I => clk_out_cpuclk,
+      O => clk_out
     );
 plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
     generic map(
@@ -106,7 +106,7 @@ plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
       CLKIN1 => clk_in1_cpuclk,
       CLKIN2 => '0',
       CLKINSEL => '1',
-      CLKOUT0 => clk_out1_cpuclk,
+      CLKOUT0 => clk_out_cpuclk,
       CLKOUT1 => NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED,
       CLKOUT2 => NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED,
       CLKOUT3 => NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED,
@@ -130,7 +130,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity cpuclk is
   port (
-    clk_out1 : out STD_LOGIC;
+    clk_out : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -143,7 +143,7 @@ begin
 inst: entity work.cpuclk_cpuclk_clk_wiz
      port map (
       clk_in1 => clk_in1,
-      clk_out1 => clk_out1,
+      clk_out => clk_out,
       locked => locked
     );
 end STRUCTURE;

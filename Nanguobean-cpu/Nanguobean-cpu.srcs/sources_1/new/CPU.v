@@ -1,8 +1,10 @@
 `timescale 1ns / 1ps
 module CPU(
-    input rst;
+    input wire clk_default,
+    input rst
     );
 //ALU
+wire clk;
 wire [31:0] aluMux_A_w, aluMux_B_w;
 wire alu_zero_w, alu_less_w;
 wire [31:0] alu_res_w;
@@ -19,8 +21,9 @@ wire [31:0] pc_pc_w;
 wire [31:0] regfile_rD1_w,regfile_rD2_w;
 wire [31:0] rfMux_wD_w;
 wire [31:0] sext_ext_w;
-cpuclk  clk (
-    .clk    (clk);
+cpuclk  clak (
+    .clk_in1    (clk_default),
+    .clk_out    (clk)
 );
 ALU_mux aluMux (
     .alua_sel   (ctrl_alua_sel_w),
@@ -50,14 +53,14 @@ CtrlUnit ctrl(
     .alu_zero   (alu_zero_w),
     .alua_sel   (ctrl_alua_sel_w),
     .alub_sel   (ctrl_alub_sel_w), 
-    .ALUop      (ctrl_ALUop_w),
+    .alu_op      (ctrl_ALUop_w),
     //DRAM
     .dram_we    (ctrl_dram_we_w), 
     //NPC
     .npc_op     (ctrl_npc_op_w), 
     //RegFile
     .rf_we      (ctrl_rf_we_w), 
-    .wd_sel     (ctrl_wd_sel_w),
+    .wd_sel     (ctrl_wd_sel_w)
 );
 
 DRAM dram(

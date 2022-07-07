@@ -56,7 +56,7 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// clk_out1____25.000______0.000______50.0______352.369____261.747
+// _clk_out____25.000______0.000______50.0______352.369____261.747
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -69,7 +69,7 @@ module cpuclk_clk_wiz
 
  (// Clock in ports
   // Clock out ports
-  output        clk_out1,
+  output        clk_out,
   // Status and control signals
   output        locked,
   input         clk_in1
@@ -92,7 +92,7 @@ wire clk_in2_cpuclk;
   //    * Unused inputs are tied off
   //    * Unused outputs are labeled unused
 
-  wire        clk_out1_cpuclk;
+  wire        clk_out_cpuclk;
   wire        clk_out2_cpuclk;
   wire        clk_out3_cpuclk;
   wire        clk_out4_cpuclk;
@@ -131,7 +131,7 @@ wire clk_in2_cpuclk;
     // Output clocks
    (
     .CLKFBOUT            (clkfbout_cpuclk),
-    .CLKOUT0             (clk_out1_cpuclk),
+    .CLKOUT0             (clk_out_cpuclk),
     .CLKOUT1             (clkout1_unused),
     .CLKOUT2             (clkout2_unused),
     .CLKOUT3             (clkout3_unused),
@@ -172,8 +172,8 @@ wire clk_in2_cpuclk;
 
 
   BUFG clkout1_buf
-   (.O   (clk_out1),
-    .I   (clk_out1_cpuclk));
+   (.O   (clk_out),
+    .I   (clk_out_cpuclk));
 
 
 

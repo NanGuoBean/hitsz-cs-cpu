@@ -1,0 +1,487 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jul  6 19:44:20 2022
+# Process ID: 20044
+# Current directory: D:/hitsz-cs-cpu/Nanguobean-cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25020 D:\hitsz-cs-cpu\Nanguobean-cpu\Nanguobean-cpu.xpr
+# Log file: D:/hitsz-cs-cpu/Nanguobean-cpu/vivado.log
+# Journal file: D:/hitsz-cs-cpu/Nanguobean-cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.xpr
+INFO: [Project 1-313] Project file moved from 'D:/self-inbox/Nanguobean-cpu' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/vivivado/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 686.293 ; gain = 124.855
+update_compile_order -fileset sources_1
+add_files -norecurse D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v
+update_compile_order -fileset sources_1
+set_property is_global_include true [get_files  D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v]
+update_compile_order -fileset sources_1
+set_property is_global_include false [get_files  D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v]
+update_compile_order -fileset sources_1
+set_property is_global_include true [get_files  D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v]
+update_compile_order -fileset sources_1
+set_property is_global_include false [get_files  D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v]
+set_property is_global_include true [get_files  D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v]
+set_property -dict [list CONFIG.CLK_OUT1_PORT {clk_out}] [get_ips cpuclk]
+generate_target all [get_files  D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+export_ip_user_files -of_objects [get_files D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+reset_run cpuclk_synth_1
+launch_runs -jobs 2 cpuclk_synth_1
+[Wed Jul  6 21:45:58 2022] Launched cpuclk_synth_1...
+Run output will be captured here: D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.ip_user_files/sim_scripts -ip_user_files_dir D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.ip_user_files -ipstatic_source_dir D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.cache/compile_simlib/modelsim} {questa=D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.cache/compile_simlib/questa} {riviera=D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.cache/compile_simlib/riviera} {activehdl=D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux1.v] -no_script -reset -force -quiet
+remove_files  D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux1.v
+file delete -force D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux1.v
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/vivivado/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/dram/sim/dram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+ERROR: [VRFC 10-2989] 'ADD' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:16]
+ERROR: [VRFC 10-2989] 'SUB' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:17]
+ERROR: [VRFC 10-2989] 'AND' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:18]
+ERROR: [VRFC 10-2989] 'OR' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:19]
+ERROR: [VRFC 10-2989] 'XOR' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:20]
+ERROR: [VRFC 10-2989] 'SLL' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:21]
+ERROR: [VRFC 10-2989] 'SRL' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:22]
+ERROR: [VRFC 10-2989] 'SRA' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:23]
+ERROR: [VRFC 10-2989] 'SLT' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:24]
+ERROR: [VRFC 10-2989] 'SLTU' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:25]
+ERROR: [VRFC 10-2865] module 'ALU' ignored due to previous errors [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:2]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/vivivado/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/dram/sim/dram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+ERROR: [VRFC 10-2989] 'ADD' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:16]
+ERROR: [VRFC 10-2989] 'SUB' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:17]
+ERROR: [VRFC 10-2989] 'AND' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:18]
+ERROR: [VRFC 10-2989] 'OR' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:19]
+ERROR: [VRFC 10-2989] 'XOR' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:20]
+ERROR: [VRFC 10-2989] 'SLL' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:21]
+ERROR: [VRFC 10-2989] 'SRL' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:22]
+ERROR: [VRFC 10-2989] 'SRA' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:23]
+ERROR: [VRFC 10-2989] 'SLT' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:24]
+ERROR: [VRFC 10-2989] 'SLTU' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:25]
+ERROR: [VRFC 10-2865] module 'ALU' ignored due to previous errors [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:2]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+file mkdir D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/constrs_1
+file mkdir D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/constrs_1/new
+close [ open D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/constrs_1/new/constrait1.xdc w ]
+add_files -fileset constrs_1 D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/constrs_1/new/constrait1.xdc
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/vivivado/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/dram/sim/dram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+ERROR: [VRFC 10-2989] 'ADD' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:16]
+ERROR: [VRFC 10-2989] 'SUB' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:17]
+ERROR: [VRFC 10-2989] 'AND' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:18]
+ERROR: [VRFC 10-2989] 'OR' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:19]
+ERROR: [VRFC 10-2989] 'XOR' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:20]
+ERROR: [VRFC 10-2989] 'SLL' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:21]
+ERROR: [VRFC 10-2989] 'SRL' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:22]
+ERROR: [VRFC 10-2989] 'SRA' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:23]
+ERROR: [VRFC 10-2989] 'SLT' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:24]
+ERROR: [VRFC 10-2989] 'SLTU' is not declared [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:25]
+ERROR: [VRFC 10-2865] module 'ALU' ignored due to previous errors [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:2]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/vivivado/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/dram/sim/dram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CtrlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+WARNING: [VRFC 10-3380] identifier 'instruction' is used before its declaration [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/IROM.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RF_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RF_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/SEXT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEXT
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+ERROR: [VRFC 10-1247] port connections cannot be mixed ordered and named [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v:47]
+ERROR: [VRFC 10-2865] module 'CPU' ignored due to previous errors [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v:2]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/vivivado/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/dram/sim/dram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CtrlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+WARNING: [VRFC 10-3380] identifier 'instruction' is used before its declaration [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/IROM.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RF_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RF_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/SEXT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEXT
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/vivivado/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 00055cd207b4432c9ac97a9d8488847d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_behav xil_defaultlib.CPU xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'ALUop' on this module [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v:54]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/vivivado/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/dram/sim/dram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CtrlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+WARNING: [VRFC 10-3380] identifier 'instruction' is used before its declaration [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/IROM.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RF_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RF_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/SEXT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEXT
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/vivivado/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 00055cd207b4432c9ac97a9d8488847d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_behav xil_defaultlib.CPU xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+ERROR: [XSIM 43-3294] Signal EXCEPTION_ACCESS_VIOLATION received.
+Printing stacktrace...
+
+[0] (KiUserExceptionDispatcher+0x2e) [0x7fffc9a70bce]
+[1] (ISIMC::VlogCompiler::transform+0x1f3c6) [0x7ff6e45bb296]
+[2] (Verific::VeriVisitor::Visit+0x48) [0x7fff0b988d68]
+[3] (ISIMC::VlogCompiler::transform+0x2276b) [0x7ff6e45be63b]
+[4] (Verific::VeriVisitor::TraverseArray+0x49) [0x7fff0b9866b9]
+[5] (Verific::VeriVisitor::Visit+0x78) [0x7fff0b989378]
+[6] (ISIMC::VlogCompiler::transform+0x241fc) [0x7ff6e45c00cc]
+[7] (ISIMC::VlogCompiler::transform+0xa08b) [0x7ff6e45a5f5b]
+[8] (ISIMC::VlogCompiler::transform+0x249c1) [0x7ff6e45c0891]
+[9] (Verific::VeriVisitor::TraverseArray+0x49) [0x7fff0b9866b9]
+[10] (Verific::VeriVisitor::Visit+0x78) [0x7fff0b989378]
+[11] (ISIMC::VlogCompiler::transform+0x241fc) [0x7ff6e45c00cc]
+[12] (ISIMC::VlogCompiler::transform+0xa08b) [0x7ff6e45a5f5b]
+[13] (ISIMC::VlogCompiler::transform+0x106) [0x7ff6e459bfd6]
+[14]  [0x7ff6e4509cfc]
+[15]  [0x7ff6e4519b12]
+[16]  [0x7ff6e45184f6]
+[17] (ISIMC::Options::parseVlogcompCommandLine+0xad60e9) [0x7ff6e52be9b9]
+[18] (BaseThreadInitThunk+0x14) [0x7fffc98e7034]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1011.035 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-145] codecvt to wstring conversion failed '1'
+set_property -dict [list CONFIG.coefficient_file {D:/hitsz-cs-cpu/Nanguobean-cpu/simplefile.coe}] [get_ips prgrom]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/hitsz-cs-cpu/Nanguobean-cpu/simplefile.coe' provided. It will be converted relative to IP Instance files '../../../../simplefile.coe'
+generate_target all [get_files  D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/prgrom.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'prgrom'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'prgrom'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'prgrom'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'prgrom'...
+catch { config_ip_cache -export [get_ips -all prgrom] }
+export_ip_user_files -of_objects [get_files D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/prgrom.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/prgrom.xci]
+launch_runs -jobs 2 prgrom_synth_1
+[Wed Jul  6 22:07:38 2022] Launched prgrom_synth_1...
+Run output will be captured here: D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/prgrom_synth_1/runme.log
+export_simulation -of_objects [get_files D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/prgrom.xci] -directory D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.ip_user_files/sim_scripts -ip_user_files_dir D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.ip_user_files -ipstatic_source_dir D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.cache/compile_simlib/modelsim} {questa=D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.cache/compile_simlib/questa} {riviera=D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.cache/compile_simlib/riviera} {activehdl=D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'F:/vivivado/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'CPU' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/simplefile.coe'
+INFO: [SIM-utils-43] Exported 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/prgrom.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj CPU_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/sim/prgrom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module prgrom
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/dram/sim/dram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dram
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CtrlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/NPC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NPC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/PC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RF_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RF_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RegFile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/SEXT.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEXT
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: F:/vivivado/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 00055cd207b4432c9ac97a9d8488847d --incr --debug typical --relax --mt 2 -L dist_mem_gen_v8_0_12 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_behav xil_defaultlib.CPU xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+ERROR: [XSIM 43-3294] Signal EXCEPTION_ACCESS_VIOLATION received.
+Printing stacktrace...
+
+[0] (KiUserExceptionDispatcher+0x2e) [0x7fffc9a70bce]
+[1] (ISIMC::VlogCompiler::transform+0x1f3c6) [0x7ff6e45bb296]
+[2] (Verific::VeriVisitor::Visit+0x48) [0x7fff0ad68d68]
+[3] (ISIMC::VlogCompiler::transform+0x2276b) [0x7ff6e45be63b]
+[4] (Verific::VeriVisitor::TraverseArray+0x49) [0x7fff0ad666b9]
+[5] (Verific::VeriVisitor::Visit+0x78) [0x7fff0ad69378]
+[6] (ISIMC::VlogCompiler::transform+0x241fc) [0x7ff6e45c00cc]
+[7] (ISIMC::VlogCompiler::transform+0xa08b) [0x7ff6e45a5f5b]
+[8] (ISIMC::VlogCompiler::transform+0x249c1) [0x7ff6e45c0891]
+[9] (Verific::VeriVisitor::TraverseArray+0x49) [0x7fff0ad666b9]
+[10] (Verific::VeriVisitor::Visit+0x78) [0x7fff0ad69378]
+[11] (ISIMC::VlogCompiler::transform+0x241fc) [0x7ff6e45c00cc]
+[12] (ISIMC::VlogCompiler::transform+0xa08b) [0x7ff6e45a5f5b]
+[13] (ISIMC::VlogCompiler::transform+0x106) [0x7ff6e459bfd6]
+[14]  [0x7ff6e4509cfc]
+[15]  [0x7ff6e4519b12]
+[16]  [0x7ff6e45184f6]
+[17] (ISIMC::Options::parseVlogcompCommandLine+0xad60e9) [0x7ff6e52be9b9]
+[18] (BaseThreadInitThunk+0x14) [0x7fffc98e7034]
+
+Done
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_runs synth_1 -jobs 2
+[Wed Jul  6 22:31:00 2022] Launched synth_1...
+Run output will be captured here: D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Jul  6 22:32:36 2022] Launched synth_1...
+Run output will be captured here: D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Wed Jul  6 22:33:38 2022] Launched impl_1...
+Run output will be captured here: D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Wed Jul  6 22:36:31 2022] Launched synth_1...
+Run output will be captured here: D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/runme.log
+[Wed Jul  6 22:36:31 2022] Launched impl_1...
+Run output will be captured here: D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/impl_1/runme.log

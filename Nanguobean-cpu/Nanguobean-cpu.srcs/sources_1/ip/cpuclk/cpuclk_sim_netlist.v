@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Mon Jul  4 09:53:21 2022
+// Date        : Wed Jul  6 21:46:33 2022
 // Host        : watson running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/self-inbox/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
+//               D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_sim_netlist.v
 // Design      : cpuclk
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,36 +14,36 @@
 
 (* NotValidForBitStream *)
 module cpuclk
-   (clk_out1,
+   (clk_out,
     locked,
     clk_in1);
-  output clk_out1;
+  output clk_out;
   output locked;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
-  wire clk_out1;
+  wire clk_out;
   wire locked;
 
   cpuclk_cpuclk_clk_wiz inst
        (.clk_in1(clk_in1),
-        .clk_out1(clk_out1),
+        .clk_out(clk_out),
         .locked(locked));
 endmodule
 
 (* ORIG_REF_NAME = "cpuclk_clk_wiz" *) 
 module cpuclk_cpuclk_clk_wiz
-   (clk_out1,
+   (clk_out,
     locked,
     clk_in1);
-  output clk_out1;
+  output clk_out;
   output locked;
   input clk_in1;
 
   wire clk_in1;
   wire clk_in1_cpuclk;
-  wire clk_out1;
-  wire clk_out1_cpuclk;
+  wire clk_out;
+  wire clk_out_cpuclk;
   wire clkfbout_buf_cpuclk;
   wire clkfbout_cpuclk;
   wire locked;
@@ -70,8 +70,8 @@ module cpuclk_cpuclk_clk_wiz
         .O(clk_in1_cpuclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
-       (.I(clk_out1_cpuclk),
-        .O(clk_out1));
+       (.I(clk_out_cpuclk),
+        .O(clk_out));
   (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
@@ -111,7 +111,7 @@ module cpuclk_cpuclk_clk_wiz
         .CLKIN1(clk_in1_cpuclk),
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
-        .CLKOUT0(clk_out1_cpuclk),
+        .CLKOUT0(clk_out_cpuclk),
         .CLKOUT1(NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED),
         .CLKOUT2(NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED),
         .CLKOUT3(NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED),

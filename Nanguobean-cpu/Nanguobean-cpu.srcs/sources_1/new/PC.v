@@ -10,9 +10,6 @@ module PC(
     output reg [31:0] pc
 );
 
-initial begin
-    pc <= 32'h0000;  //TODO: does 0 is default value?
-end
 
 always@(posedge clk) begin
     if(rst) pc <= 32'h0000;

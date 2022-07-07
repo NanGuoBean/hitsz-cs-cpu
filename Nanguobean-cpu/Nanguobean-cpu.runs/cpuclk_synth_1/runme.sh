@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/self-inbox/Nanguobean-cpu/Nanguobean-cpu.runs/cpuclk_synth_1'
+HD_PWD='D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/cpuclk_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

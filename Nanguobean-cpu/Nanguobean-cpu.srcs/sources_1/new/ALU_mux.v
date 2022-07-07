@@ -8,8 +8,8 @@ module ALU_mux(
     input [31:0] PC_pc,
     input [31:0] RF_rD2,
     input [31:0] sext,
-    output [31:0] A,
-    output [31:0] B
+    output reg [31:0] A,
+    output reg [31:0] B
     );
 
 always @(*) begin

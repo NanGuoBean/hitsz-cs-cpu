@@ -1,5 +1,4 @@
-// file: param.v
-`ifndef CPU_PARAM
+
 `define CPU_PARAM
     `define ADD     'b000
     `define SUB     'b001
@@ -14,7 +13,6 @@
 
     `define RF_MUX_pc4   'b000
     `define RF_MUX_alu   'b001
-    `define RF_MUX_sext  'b002
-    `define RF_MUX_dram  'b003
-    `define RF_MUX_sext2 'b004
-`endif
+    `define RF_MUX_sext  'b010
+    `define RF_MUX_dram  'b011
+    `define RF_MUX_sext2 'b100

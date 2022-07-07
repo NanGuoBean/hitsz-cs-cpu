@@ -13,16 +13,16 @@ assign less = res[31];
 
 always@(*) begin
     case(alu_op)
-        ADD: res = A + B;
-        SUB: res = A + ~B + 1;
-        AND: res = A & B;
-        OR: res = A | B;
-        XOR: res = A ^ B;
-        SLL: res = A << B;
-        SRL: res = A >> B;
-        SRA: res = $unsigned($signed(A) >>> B);
-        SLT: res = (A+~B+1) >= 'h80000000;
-        SLTU: res  = A < B ;
+        `ADD: res = A + B;
+        `SUB: res = A + ~B + 1;
+        `AND: res = A & B;
+        `OR: res = A | B;
+        `XOR: res = A ^ B;
+        `SLL: res = A << B;
+        `SRL: res = A >> B;
+        `SRA: res = $unsigned($signed(A) >>> B);
+        `SLT: res = (A+~B+1) >= 'h80000000;
+        `SLTU: res  = A < B ;
     endcase
 end
 
