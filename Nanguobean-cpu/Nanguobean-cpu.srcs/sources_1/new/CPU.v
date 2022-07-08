@@ -1,8 +1,32 @@
 `timescale 1ns / 1ps
 module CPU(
     input wire clk_default,
-    input rst
+    input wire rst,
+    input wire[31:0] irom_inst_w,
+    input wire[31:0] dram_rd_w,
+
+    output wire[31:0] pc_out,
+    output wire[31:0] mem_adr_out,
+    output wire mem_we_out,
+    output wire[31:0] mem_wdin_out,
+
+    output wire wb_have_inst_out,
+    output wire[31:0] wb_pc_out,
+    output wire wb_ena_out,
+    output wire[4:0] wb_reg_out,
+    output wire[31:0] wb_value_out
     );
+
+//top module
+assign pc_out = pc_pc_w;
+assign mem_adr_out = alu_res_w;
+assign mem_we_out  = ctrl_dram_we_w;
+assign mem_wdin_out = regfile_rD2_w;
+assign wb_have_inst_out = 1;
+assign wb_pc_out = pc_out;
+assign wb_ena_out = ctrl_rf_we_w;
+assign wb_reg_out = irom_inst_w[11:7];
+assign wb_value   = rfMux_wD_w;
 //ALU
 wire clk;
 wire [31:0] aluMux_A_w, aluMux_B_w;
@@ -10,8 +34,7 @@ wire alu_zero_w, alu_less_w;
 wire [31:0] alu_res_w;
 //Ctrl
 wire ctrl_alua_sel_w,ctrl_alub_sel_w,ctrl_dram_we_w,ctrl_rf_we_w;
-wire [3:0] ctrl_ALUop_w;
-wire [1:0] ctrl_npc_op_w;
+wire [3:0] ctrl_ _npc_op_w;
 wire [2:0] ctrl_wd_sel_w;
 
 wire [31:0] dram_rd_w;
@@ -21,6 +44,21 @@ wire [31:0] pc_pc_w;
 wire [31:0] regfile_rD1_w,regfile_rD2_w;
 wire [31:0] rfMux_wD_w;
 wire [31:0] sext_ext_w;
+
+
+// DRAM dram(
+//     .clk        (clk),
+//     .adr        (alu_res_w),        // from ALU.C
+//     .dram_we    (ctrl_dram_we_w),    // write_enable
+//     .wdin       (regfile_rD2_w),       // from RF.rD2
+//     .rd         (dram_rd_w)          // data from dram
+// );
+
+// IROM irom(
+//     .pc         (pc_pc_w),
+//     .inst       (irom_inst_w)
+// );
+
 cpuclk  clak (
     .clk_in1    (clk_default),
     .clk_out    (clk)
@@ -63,18 +101,7 @@ CtrlUnit ctrl(
     .wd_sel     (ctrl_wd_sel_w)
 );
 
-DRAM dram(
-    .clk        (clk),
-    .adr        (alu_res_w),        // from ALU.C
-    .dram_we    (ctrl_dram_we_w),    // write_enable
-    .wdin       (regfile_rD2_w),       // from RF.rD2
-    .rd         (dram_rd_w)          // data from dram
-);
 
-IROM irom(
-    .pc         (pc_pc_w),
-    .inst       (irom_inst_w)
-);
 
 NPC npc(
     .pc         (pc_pc_w),
