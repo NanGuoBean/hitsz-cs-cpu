@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Jul  9 14:07:51 2022
+| Date         : Sun Jul 10 00:21:21 2022
 | Host         : watson running 64-bit major release  (build 9200)
 | Command      : report_methodology -file board_methodology_drc_routed.rpt -pb board_methodology_drc_routed.pb -rpx board_methodology_drc_routed.rpx
 | Design       : board
@@ -35,7 +35,7 @@ Table of Contents
 -----------------
 CKLD-2#1 Warning
 Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
-Clock net clk_i_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): clk_i_IBUF_inst/O, U_divider/clk_i
+Clock net clk_i_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): U_divider/clk_i, clk_i_IBUF_inst/O
 Related violations: <none>
 
 TIMING-17#1 Warning

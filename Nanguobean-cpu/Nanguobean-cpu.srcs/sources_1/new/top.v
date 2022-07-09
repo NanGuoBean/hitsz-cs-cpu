@@ -19,19 +19,19 @@ wire mem_we;
 reg[31:0] mem_wdin,temp_wdin;
 
 CPU  cpu(
-    .clk_default(clk),
-    .rst(rst_n),
-    .irom_inst_w(inst),
-    .dram_rd_w(mem_rd),
-    .pc_out(pc),
-    .mem_adr_out(mem_adr),
-    .mem_we_out(mem_we),
-    .mem_wdin_out(temp_wdin),
-    .wb_have_inst_out(debug_wb_have_inst),
-    .wb_pc_out(debug_wb_pc),
-    .wb_ena_out(debug_wb_ena),
-    .wb_reg_out(debug_wb_reg),
-    .wb_value_out(debug_wb_value)
+    .clk_default        (clk),
+    .rst                (rst_n),
+    .irom_inst_w        (inst),
+    .dram_rd_w          (mem_rd),
+    .pc_out             (pc),
+    .mem_adr_out        (mem_adr),
+    .mem_we_out         (mem_we),
+    .mem_wdin_out       (temp_wdin),
+    .wb_have_inst_out   (debug_wb_have_inst),
+    .wb_pc_out          (debug_wb_pc),
+    .wb_ena_out         (debug_wb_ena),
+    .wb_reg_out         (debug_wb_reg),
+    .wb_value_out       (debug_wb_value)
 );
 
 
@@ -55,12 +55,31 @@ always @(*) begin
     endcase
 end
 
+always @(*) begin
+    mem_wdin = temp_rd;
+    case(inst[14:12])
+        3'b000: case(mem_adr[1:0])
+            'b00:mem_wdin[7:0] = temp_wdin[7:0];
+            'b01:mem_wdin[15:8] = temp_wdin[7:0];
+            'b10:mem_wdin[23:16] = temp_wdin[7:0];
+            'b11:mem_wdin[31:24] = temp_wdin[7:0];
+        endcase
+        3'b001: case(mem_adr[1:0])
+            'b00:mem_wdin[15:0] = temp_wdin[15:0];
+            'b01:mem_wdin[23:8] = temp_wdin[15:0];
+            'b10:mem_wdin[31:16] = temp_wdin[15:0];
+            'b11:mem_wdin[31:24] = temp_wdin[7:0];
+        endcase
+        3'b010: mem_wdin[31:0] = temp_wdin[31:0];
+        default: mem_wdin = mem_wdin;
+    endcase
+end
 data_mem u_data_mem(
-    .clk(clk),
-    .a(mem_adr[17:2]),
-    .spo(temp_rd),
-    .we(mem_we),
-    .d(mem_wdin)
+    .clk        (clk),
+    .a          (mem_adr[17:2]),
+    .spo        (temp_rd),
+    .we         (mem_we),
+    .d          (mem_wdin)
 );
 
 endmodule

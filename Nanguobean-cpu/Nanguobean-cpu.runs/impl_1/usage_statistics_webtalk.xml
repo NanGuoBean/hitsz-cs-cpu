@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sat Jul  9 14:11:35 2022'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sun Jul 10 00:33:31 2022'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2405991" description="" />
-  <keyValuePair key="date_generated" value="Sat Jul  9 14:11:35 2022" description="" />
+  <keyValuePair key="date_generated" value="Sun Jul 10 00:33:31 2022" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2018.3 (64-bit)" description="" />
   <keyValuePair key="project_id" value="00055cd207b4432c9ac97a9d8488847d" description="" />
-  <keyValuePair key="project_iteration" value="1" description="" />
+  <keyValuePair key="project_iteration" value="2" description="" />
   <keyValuePair key="random_id" value="96491eb3b9db56e38359bca5f7c11d86" description="" />
   <keyValuePair key="registration_id" value="96491eb3b9db56e38359bca5f7c11d86" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
@@ -314,29 +314,29 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:00:26s" description="" />
+   <keyValuePair key="elapsed" value="00:00:33s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="537.102MB" description="" />
-   <keyValuePair key="memory_peak" value="819.359MB" description="" />
+   <keyValuePair key="memory_gain" value="552.980MB" description="" />
+   <keyValuePair key="memory_peak" value="835.922MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="6" description="">
   <section name="post_unisim_transformation" level="2" order="1" description="">
-   <keyValuePair key="bufg" value="5" description="" />
+   <keyValuePair key="bufg" value="6" description="" />
    <keyValuePair key="carry4" value="48" description="" />
    <keyValuePair key="fdce" value="19" description="" />
    <keyValuePair key="fdpe" value="9" description="" />
    <keyValuePair key="fdre" value="64" description="" />
-   <keyValuePair key="gnd" value="18" description="" />
+   <keyValuePair key="gnd" value="17" description="" />
    <keyValuePair key="ibuf" value="26" description="" />
-   <keyValuePair key="ldce" value="135" description="" />
+   <keyValuePair key="ldce" value="141" description="" />
    <keyValuePair key="lut1" value="2" description="" />
-   <keyValuePair key="lut2" value="92" description="" />
-   <keyValuePair key="lut3" value="115" description="" />
-   <keyValuePair key="lut4" value="146" description="" />
-   <keyValuePair key="lut5" value="475" description="" />
-   <keyValuePair key="lut6" value="4847" description="" />
-   <keyValuePair key="muxf7" value="4840" description="" />
+   <keyValuePair key="lut2" value="93" description="" />
+   <keyValuePair key="lut3" value="154" description="" />
+   <keyValuePair key="lut4" value="79" description="" />
+   <keyValuePair key="lut5" value="434" description="" />
+   <keyValuePair key="lut6" value="4939" description="" />
+   <keyValuePair key="muxf7" value="4836" description="" />
    <keyValuePair key="muxf8" value="2275" description="" />
    <keyValuePair key="obuf" value="40" description="" />
    <keyValuePair key="plle2_adv" value="1" description="" />
@@ -346,21 +346,21 @@
    <keyValuePair key="vcc" value="14" description="" />
   </section>
   <section name="pre_unisim_transformation" level="2" order="2" description="">
-   <keyValuePair key="bufg" value="5" description="" />
+   <keyValuePair key="bufg" value="6" description="" />
    <keyValuePair key="carry4" value="48" description="" />
    <keyValuePair key="fdce" value="19" description="" />
    <keyValuePair key="fdpe" value="9" description="" />
    <keyValuePair key="fdre" value="64" description="" />
-   <keyValuePair key="gnd" value="18" description="" />
+   <keyValuePair key="gnd" value="17" description="" />
    <keyValuePair key="ibuf" value="27" description="" />
-   <keyValuePair key="ldce" value="135" description="" />
+   <keyValuePair key="ldce" value="141" description="" />
    <keyValuePair key="lut1" value="2" description="" />
-   <keyValuePair key="lut2" value="92" description="" />
-   <keyValuePair key="lut3" value="115" description="" />
-   <keyValuePair key="lut4" value="146" description="" />
-   <keyValuePair key="lut5" value="475" description="" />
-   <keyValuePair key="lut6" value="4847" description="" />
-   <keyValuePair key="muxf7" value="744" description="" />
+   <keyValuePair key="lut2" value="93" description="" />
+   <keyValuePair key="lut3" value="154" description="" />
+   <keyValuePair key="lut4" value="79" description="" />
+   <keyValuePair key="lut5" value="434" description="" />
+   <keyValuePair key="lut6" value="4939" description="" />
+   <keyValuePair key="muxf7" value="740" description="" />
    <keyValuePair key="muxf8" value="227" description="" />
    <keyValuePair key="obuf" value="40" description="" />
    <keyValuePair key="plle2_adv" value="1" description="" />
@@ -376,7 +376,7 @@
    <keyValuePair key="addsrcwizard_specify_hdl_netlist_block_design" value="1" description="" />
    <keyValuePair key="addsrcwizard_specify_or_create_constraint_files" value="2" description="" />
    <keyValuePair key="basedialog_cancel" value="2" description="" />
-   <keyValuePair key="basedialog_ok" value="45" description="" />
+   <keyValuePair key="basedialog_ok" value="52" description="" />
    <keyValuePair key="basedialog_yes" value="1" description="" />
    <keyValuePair key="cmdmsgdialog_messages" value="2" description="" />
    <keyValuePair key="cmdmsgdialog_ok" value="7" description="" />
@@ -391,21 +391,23 @@
    <keyValuePair key="createsrcfiledialog_file_name" value="16" description="" />
    <keyValuePair key="customizeerrordialog_messages" value="2" description="" />
    <keyValuePair key="customizeerrordialog_ok" value="1" description="" />
-   <keyValuePair key="filesetpanel_file_set_panel_tree" value="339" description="" />
-   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="24" description="" />
+   <keyValuePair key="filesetpanel_file_set_panel_tree" value="352" description="" />
+   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="29" description="" />
    <keyValuePair key="fpgachooser_fpga_table" value="2" description="" />
    <keyValuePair key="gettingstartedview_create_new_project" value="1" description="" />
    <keyValuePair key="hjfilechooserrecentlistpreview_recent_directories" value="3" description="" />
+   <keyValuePair key="launchpanel_dont_show_this_dialog_again" value="1" description="" />
    <keyValuePair key="logmonitor_monitor" value="5" description="" />
    <keyValuePair key="mainmenumgr_file" value="2" description="" />
    <keyValuePair key="mainmenumgr_open_recent_project" value="2" description="" />
    <keyValuePair key="mainmenumgr_project" value="1" description="" />
-   <keyValuePair key="messagewithoptiondialog_dont_show_this_dialog_again" value="1" description="" />
-   <keyValuePair key="msgtreepanel_message_view_tree" value="76" description="" />
+   <keyValuePair key="messagewithoptiondialog_dont_show_this_dialog_again" value="2" description="" />
+   <keyValuePair key="msgtreepanel_message_view_tree" value="82" description="" />
    <keyValuePair key="pacommandnames_add_sources" value="12" description="" />
    <keyValuePair key="pacommandnames_auto_update_hier" value="18" description="" />
    <keyValuePair key="pacommandnames_clear_global_include" value="2" description="" />
    <keyValuePair key="pacommandnames_recustomize_core" value="1" description="" />
+   <keyValuePair key="pacommandnames_run_bitgen" value="1" description="" />
    <keyValuePair key="pacommandnames_set_as_top" value="1" description="" />
    <keyValuePair key="pacommandnames_set_global_include" value="3" description="" />
    <keyValuePair key="pacommandnames_simulation_run_behavioral" value="9" description="" />
@@ -441,18 +443,18 @@
    <keyValuePair key="editdelete" value="7" description="" />
    <keyValuePair key="newproject" value="1" description="" />
    <keyValuePair key="recustomizecore" value="8" description="" />
-   <keyValuePair key="runbitgen" value="1" description="" />
-   <keyValuePair key="runimplementation" value="4" description="" />
-   <keyValuePair key="runsynthesis" value="5" description="" />
+   <keyValuePair key="runbitgen" value="2" description="" />
+   <keyValuePair key="runimplementation" value="5" description="" />
+   <keyValuePair key="runsynthesis" value="10" description="" />
    <keyValuePair key="savefileproxyhandler" value="1" description="" />
    <keyValuePair key="setglobalinclude" value="5" description="" />
    <keyValuePair key="setsourceenabled" value="1" description="" />
-   <keyValuePair key="showview" value="5" description="" />
+   <keyValuePair key="showview" value="9" description="" />
    <keyValuePair key="simulationrun" value="9" description="" />
    <keyValuePair key="viewtaskimplementation" value="1" description="" />
   </section>
   <section name="other_data" level="2" order="3" description="">
-   <keyValuePair key="guimode" value="5" description="" />
+   <keyValuePair key="guimode" value="6" description="" />
   </section>
   <section name="project_data" level="2" order="4" description="">
    <keyValuePair key="constraintsetcount" value="2" description="" />

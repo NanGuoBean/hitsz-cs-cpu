@@ -6,11 +6,13 @@ module ALU(
     input [31:0] B,
     output zero,
     output less,
+    output Nless,
     output reg [31:0] res
 );
 
 assign zero = (res == 0);
 assign less = res[31];
+assign Nless = (A<B);
 
 always@(*) begin
     case(alu_op)
@@ -19,10 +21,12 @@ always@(*) begin
         `AND: res = A & B;
         `OR: res = A | B;
         `XOR: res = A ^ B;
-        `SLL: res = A << B;
-        `SRL: res = A >> B;
-        `SRA: res = $unsigned($signed(A) >>> B);
-        `SLT: res = (A+~B+1) >= 'h80000000;
+        `SLL: res = A << B[4:0];
+        `SRL: res = A >> B[4:0];
+        `SRA: res = $unsigned($signed(A) >>> B[4:0]);
+        `SLT: res = A[31]<B[31] ?   0     //A+,B-
+                    : A[31]>B[31] ? 1     //A-,B+
+                    : A<B;
         `SLTU: res  = A < B ;
     endcase
 end

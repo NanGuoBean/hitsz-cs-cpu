@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Jul  9 14:04:56 2022
-# Process ID: 18416
+# Start of session at: Sun Jul 10 00:18:15 2022
+# Process ID: 19616
 # Current directory: D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1
 # Command line: vivado.exe -log board.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source board.tcl
 # Log file: D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/board.vds
@@ -15,36 +15,35 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2904 
+INFO: Helper process launched with PID 7516 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 394.234 ; gain = 100.480
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 394.652 ; gain = 100.203
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'board' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/board.v:1]
 INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v:2]
-INFO: [Synth 8-6157] synthesizing module 'cpuclk' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-18416-watson/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (1#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-18416-watson/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpuclk' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-19616-watson/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (1#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-19616-watson/realtime/cpuclk_stub.v:5]
 WARNING: [Synth 8-350] instance 'clak' of module 'cpuclk' requires 3 connections, but only 2 given [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v:35]
 INFO: [Synth 8-6157] synthesizing module 'PC' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/PC.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'PC' (2#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/PC.v:6]
 INFO: [Synth 8-6157] synthesizing module 'NPC' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/NPC.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'NPC' (3#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/NPC.v:3]
 INFO: [Synth 8-6157] synthesizing module 'IROM' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/IROM.v:2]
-INFO: [Synth 8-6157] synthesizing module 'prgrom' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-18416-watson/realtime/prgrom_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prgrom' (4#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-18416-watson/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'prgrom' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-19616-watson/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prgrom' (4#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-19616-watson/realtime/prgrom_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'IROM' (5#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/IROM.v:2]
 INFO: [Synth 8-6157] synthesizing module 'DRAM' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/DRAM.v:2]
-INFO: [Synth 8-6157] synthesizing module 'dram' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-18416-watson/realtime/dram_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dram' (6#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-18416-watson/realtime/dram_stub.v:6]
-WARNING: [Synth 8-689] width (1) of port connection 'spo' does not match port width (32) of module 'dram' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/DRAM.v:21]
+INFO: [Synth 8-6157] synthesizing module 'dram' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-19616-watson/realtime/dram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dram' (6#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/.Xil/Vivado-19616-watson/realtime/dram_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'DRAM' (7#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/DRAM.v:2]
 INFO: [Synth 8-6157] synthesizing module 'ALU_mux' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'ALU_mux' (8#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux.v:2]
 INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:16]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:18]
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (9#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:3]
 INFO: [Synth 8-6157] synthesizing module 'CtrlUnit' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:115]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:27]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:116]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:28]
 INFO: [Synth 8-6155] done synthesizing module 'CtrlUnit' (10#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:3]
 INFO: [Synth 8-6157] synthesizing module 'RegFile' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RegFile.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'RegFile' (11#1) [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RegFile.v:3]
@@ -96,8 +95,6 @@ WARNING: [Synth 8-3331] design DRAM has unconnected port adr[19]
 WARNING: [Synth 8-3331] design DRAM has unconnected port adr[18]
 WARNING: [Synth 8-3331] design DRAM has unconnected port adr[17]
 WARNING: [Synth 8-3331] design DRAM has unconnected port adr[16]
-WARNING: [Synth 8-3331] design DRAM has unconnected port adr[1]
-WARNING: [Synth 8-3331] design DRAM has unconnected port adr[0]
 WARNING: [Synth 8-3331] design IROM has unconnected port pc[31]
 WARNING: [Synth 8-3331] design IROM has unconnected port pc[30]
 WARNING: [Synth 8-3331] design IROM has unconnected port pc[29]
@@ -149,7 +146,7 @@ WARNING: [Synth 8-3331] design CPU has unconnected port pc_out[2]
 WARNING: [Synth 8-3331] design CPU has unconnected port pc_out[1]
 WARNING: [Synth 8-3331] design CPU has unconnected port pc_out[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 450.316 ; gain = 156.562
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 451.352 ; gain = 156.902
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -162,10 +159,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 450.316 ; gain = 156.562
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 451.352 ; gain = 156.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 450.316 ; gain = 156.562
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 451.352 ; gain = 156.902
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -184,24 +181,24 @@ Parsing XDC File [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/constrs_1/n
 Finished Parsing XDC File [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/constrs_1/new/pin.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/constrs_1/new/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/board_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/board_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 803.551 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 808.711 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 803.551 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 808.711 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 803.551 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 803.551 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 808.711 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 808.711 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 803.551 ; gain = 509.797
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 808.711 ; gain = 514.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 803.551 ; gain = 509.797
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 808.711 ; gain = 514.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -210,25 +207,25 @@ Applied set_property IO_BUFFER_TYPE = NONE for clk_i. (constraint file  d:/hitsz
 Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_i. (constraint file  d:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk/cpuclk_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for U_CPU/clak. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 803.551 ; gain = 509.797
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 808.711 ; gain = 514.262
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "alu_op" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "alua_sel" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ext" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clk_o" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-327] inferring latch for variable 'res_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:12]
-WARNING: [Synth 8-327] inferring latch for variable 'alua_sel_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:46]
-WARNING: [Synth 8-327] inferring latch for variable 'alub_sel_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:47]
-WARNING: [Synth 8-327] inferring latch for variable 'alu_op_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:31]
-WARNING: [Synth 8-327] inferring latch for variable 'dram_we_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:49]
-WARNING: [Synth 8-327] inferring latch for variable 'npc_op_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:50]
-WARNING: [Synth 8-327] inferring latch for variable 'rf_we_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:51]
-WARNING: [Synth 8-327] inferring latch for variable 'wd_sel_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'res_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU.v:13]
+WARNING: [Synth 8-327] inferring latch for variable 'alua_sel_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'alub_sel_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'alu_op_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:32]
+WARNING: [Synth 8-327] inferring latch for variable 'dram_we_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:50]
+WARNING: [Synth 8-327] inferring latch for variable 'npc_op_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:51]
+WARNING: [Synth 8-327] inferring latch for variable 'rf_we_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'wd_sel_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v:53]
 WARNING: [Synth 8-327] inferring latch for variable 'ext_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/SEXT2.v:15]
 WARNING: [Synth 8-327] inferring latch for variable 'wD_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/RF_mux.v:15]
 WARNING: [Synth 8-327] inferring latch for variable 'ext_reg' [D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/SEXT.v:13]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 803.551 ; gain = 509.797
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 808.711 ; gain = 514.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -255,8 +252,8 @@ Detailed RTL Component Info :
 +---RAMs : 
 	             1024 Bit         RAMs := 1     
 +---Muxes : 
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 6     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 7     
 	   6 Input     32 Bit        Muxes := 2     
 	   2 Input     14 Bit        Muxes := 1     
 	   3 Input      4 Bit        Muxes := 1     
@@ -265,10 +262,10 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 2     
 	  10 Input      3 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 	  11 Input      1 Bit        Muxes := 1     
-	  10 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 6     
 	   3 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
 	   6 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -288,6 +285,11 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 3     
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 1     
+Module DRAM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 1     
 Module ALU_mux 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -300,6 +302,7 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
 	  11 Input      1 Bit        Muxes := 1     
 Module CtrlUnit 
 Detailed RTL Component Info : 
@@ -309,7 +312,7 @@ Detailed RTL Component Info :
 	   2 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	  10 Input      3 Bit        Muxes := 1     
-	  10 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 6     
 	   3 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 1     
 Module RegFile 
@@ -388,8 +391,10 @@ WARNING: [Synth 8-3331] design CtrlUnit has unconnected port inst[10]
 WARNING: [Synth 8-3331] design CtrlUnit has unconnected port inst[9]
 WARNING: [Synth 8-3331] design CtrlUnit has unconnected port inst[8]
 WARNING: [Synth 8-3331] design CtrlUnit has unconnected port inst[7]
-WARNING: [Synth 8-3331] design CPU has unconnected port pc_out[31]
-WARNING: [Synth 8-3331] design CPU has unconnected port pc_out[30]
+WARNING: [Synth 8-3331] design DRAM has unconnected port adr[31]
+WARNING: [Synth 8-3331] design DRAM has unconnected port adr[30]
+WARNING: [Synth 8-3331] design DRAM has unconnected port adr[29]
+WARNING: [Synth 8-3331] design DRAM has unconnected port adr[28]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'U_divider/cnt_reg[15]' (FDC) to 'U_divider/cnt_reg[16]'
 INFO: [Synth 8-3886] merging instance 'U_divider/cnt_reg[16]' (FDC) to 'U_divider/cnt_reg[14]'
@@ -402,7 +407,7 @@ INFO: [Synth 8-3886] merging instance 'U_display/led_cc_reg' (FDC) to 'U_display
 INFO: [Synth 8-3886] merging instance 'U_display/led_cb_reg' (FDC) to 'U_display/led_ca_reg'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U_display/led_ca_reg )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 803.551 ; gain = 509.797
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 808.711 ; gain = 514.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -431,13 +436,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'U_CPU/clak/clk_out' to pin 'U_CPU/clak/bbstub_clk_out/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 803.551 ; gain = 509.797
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 808.711 ; gain = 514.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 815.801 ; gain = 522.047
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 818.309 ; gain = 523.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -462,17 +467,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (U_CPU/ctrl/alua_sel_reg) is unused and will be removed from module board.
-WARNING: [Synth 8-3332] Sequential element (U_CPU/sext2/ext_reg[15]) is unused and will be removed from module board.
-WARNING: [Synth 8-3332] Sequential element (U_CPU/sext2/ext_reg[14]) is unused and will be removed from module board.
-WARNING: [Synth 8-3332] Sequential element (U_CPU/sext2/ext_reg[13]) is unused and will be removed from module board.
-WARNING: [Synth 8-3332] Sequential element (U_CPU/sext2/ext_reg[12]) is unused and will be removed from module board.
-WARNING: [Synth 8-3332] Sequential element (U_CPU/sext2/ext_reg[11]) is unused and will be removed from module board.
-WARNING: [Synth 8-3332] Sequential element (U_CPU/sext2/ext_reg[10]) is unused and will be removed from module board.
-WARNING: [Synth 8-3332] Sequential element (U_CPU/sext2/ext_reg[9]) is unused and will be removed from module board.
-WARNING: [Synth 8-3332] Sequential element (U_CPU/sext2/ext_reg[8]) is unused and will be removed from module board.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 819.359 ; gain = 525.605
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 835.922 ; gain = 541.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -496,7 +492,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 819.359 ; gain = 525.605
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 835.922 ; gain = 541.473
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -509,7 +505,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 819.359 ; gain = 525.605
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 835.922 ; gain = 541.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -521,25 +517,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 819.359 ; gain = 525.605
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 835.922 ; gain = 541.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 819.359 ; gain = 525.605
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 835.922 ; gain = 541.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 819.359 ; gain = 525.605
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 835.922 ; gain = 541.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 819.359 ; gain = 525.605
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 835.922 ; gain = 541.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -561,68 +557,67 @@ Report Cell Usage:
 |1     |cpuclk |     1|
 |2     |dram   |     1|
 |3     |prgrom |     1|
-|4     |BUFG   |     3|
+|4     |BUFG   |     4|
 |5     |CARRY4 |    48|
 |6     |LUT1   |     2|
-|7     |LUT2   |    75|
-|8     |LUT3   |   102|
-|9     |LUT4   |   118|
-|10    |LUT5   |   184|
-|11    |LUT6   |   413|
-|12    |MUXF7  |     4|
-|13    |RAM32M |    12|
-|14    |FDCE   |    19|
-|15    |FDPE   |     9|
-|16    |FDRE   |    32|
-|17    |LD     |   135|
-|18    |IBUF   |    25|
-|19    |OBUF   |    40|
+|7     |LUT2   |    76|
+|8     |LUT3   |   141|
+|9     |LUT4   |    51|
+|10    |LUT5   |   143|
+|11    |LUT6   |   505|
+|12    |RAM32M |    12|
+|13    |FDCE   |    19|
+|14    |FDPE   |     9|
+|15    |FDRE   |    32|
+|16    |LD     |   141|
+|17    |IBUF   |    25|
+|18    |OBUF   |    40|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+------------+---------+------+
 |      |Instance    |Module   |Cells |
 +------+------------+---------+------+
-|1     |top         |         |  1287|
-|2     |  U_CPU     |CPU      |  1158|
-|3     |    alu     |ALU      |    62|
-|4     |    ctrl    |CtrlUnit |   170|
-|5     |    dram    |DRAM     |    32|
-|6     |    irom    |IROM     |   103|
+|1     |top         |         |  1314|
+|2     |  U_CPU     |CPU      |  1184|
+|3     |    alu     |ALU      |   149|
+|4     |    ctrl    |CtrlUnit |   122|
+|5     |    dram    |DRAM     |    80|
+|6     |    irom    |IROM     |   138|
 |7     |    npc     |NPC      |    20|
-|8     |    pc      |PC       |   103|
-|9     |    regfile |RegFile  |   420|
+|8     |    pc      |PC       |   389|
+|9     |    regfile |RegFile  |   121|
 |10    |    rfMux   |RF_mux   |    32|
-|11    |    sext    |SEXT     |   190|
-|12    |    sext2   |SEXT2    |    24|
+|11    |    sext    |SEXT     |    99|
+|12    |    sext2   |SEXT2    |    32|
 |13    |  U_display |display  |    23|
 |14    |  U_divider |divider  |    38|
 +------+------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 819.359 ; gain = 525.605
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 835.922 ; gain = 541.473
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 67 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 819.359 ; gain = 172.371
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 819.359 ; gain = 525.605
+Synthesis finished with 0 errors, 0 critical warnings and 74 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 835.922 ; gain = 184.113
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 835.922 ; gain = 541.473
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 199 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 201 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 842.969 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 147 instances were transformed.
-  LD => LDCE: 135 instances
+  A total of 153 instances were transformed.
+  LD => LDCE: 141 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-77 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
+77 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 824.184 ; gain = 541.926
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 824.184 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:34 . Memory (MB): peak = 842.969 ; gain = 560.027
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 842.969 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.runs/synth_1/board.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file board_utilization_synth.rpt -pb board_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jul  9 14:05:28 2022...
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 10 00:18:54 2022...
