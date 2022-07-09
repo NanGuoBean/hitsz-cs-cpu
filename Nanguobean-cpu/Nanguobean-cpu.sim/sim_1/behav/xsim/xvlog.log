@@ -1,8 +1,4 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/param.v" into library xil_defaultlib
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/prgrom/sim/prgrom.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module prgrom
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/dram/sim/dram.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dram
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
@@ -11,6 +7,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nang
 INFO: [VRFC 10-311] analyzing module ALU
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/ALU_mux.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CtrlUnit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CtrlUnit
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/DRAM.v" into library xil_defaultlib
@@ -27,5 +25,11 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nang
 INFO: [VRFC 10-311] analyzing module RegFile
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/SEXT.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module SEXT
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/CPU.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/SEXT2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SEXT2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/divider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module divider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/hitsz-cs-cpu/Nanguobean-cpu/Nanguobean-cpu.srcs/sources_1/new/board.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module board

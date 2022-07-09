@@ -1,6 +1,4 @@
 `timescale 1ns / 1ps
-
-
 module ALU_mux(
     input alua_sel,
     input alub_sel,

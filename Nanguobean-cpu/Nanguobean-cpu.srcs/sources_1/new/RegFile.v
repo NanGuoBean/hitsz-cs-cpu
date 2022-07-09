@@ -2,7 +2,7 @@
 
 module RegFile(
     input clk,              
-    //input immres,           //立即数直接写�??
+    //input immres,           //立即数直接写�??
     input [4:0] rR1,        
     input [4:0] rR2,        
     input [4:0] wR,         
@@ -16,12 +16,12 @@ module RegFile(
 reg [31:0] regFile [0:31];
 
 always@(rR1 or rR2) begin
-    rD1 <= regFile[rR1];
-    rD2 <= regFile[rR2];
+    rD1 = regFile[rR1];
+    rD2 = regFile[rR2];
 end
 
 
-always@(posedge ~clk ) begin
+always@(posedge clk ) begin
     if(rf_we && (wR != 0) )
         regFile[wR] <= wD;
 end

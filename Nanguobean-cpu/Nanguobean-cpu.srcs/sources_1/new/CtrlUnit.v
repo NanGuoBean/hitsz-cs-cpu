@@ -4,7 +4,7 @@ module CtrlUnit(
     input [31:0] inst,
     //ALU
     input alu_less,     
-    input alu_zero,
+    input alu_zero, 
     output reg alua_sel,
     output reg alub_sel, //output reg ALUsrc,
     output reg [3:0] alu_op, //output reg [3:0] ALUop,
@@ -18,8 +18,8 @@ module CtrlUnit(
 );
 
 wire [6:0] opcode = inst[6:0];
-wire [6:0] func7 = inst[14:12];
-wire  [2:0] func3 = inst[31:25];
+wire [6:0] func7 = inst[31:25];
+wire [2:0] func3 = inst[14:12];
 
 
 
@@ -74,14 +74,13 @@ always@(*) begin
             wd_sel   = `RF_MUX_alu;
         end
         7'b0000011: begin // I-type for load
-            //TODO: current only for lw, and ignore first sext
             alua_sel = 0;   
             alub_sel = 1;      //sext 
             alu_op   = `ADD;
             dram_we  = 0;
             npc_op   = 0;
             rf_we    = 1; 
-            wd_sel   = `RF_MUX_dram;
+            wd_sel   = `RF_MUX_sext2;
         end
 
         7'b1100111: begin //I-type for jalr
@@ -105,7 +104,7 @@ always@(*) begin
             wd_sel   = 0;
         end
 
-        7'b1100011: begin
+        7'b1100011: begin //B-type
             alua_sel = 0; 
             alub_sel = 0;       
             alu_op   = `SUB;
@@ -114,13 +113,34 @@ always@(*) begin
             rf_we    = 0; 
             wd_sel   = 0;
             case(func3)
-                3'b000: if(alu_zero) npc_op = 1;
-                3'b001: if(~alu_zero) npc_op = 1;
-                3'b100: if(alu_less) npc_op = 1;
+                3'b000: if(alu_zero==1) npc_op = 1;
+                3'b001: if(alu_zero==0) npc_op = 1;
+                3'b100: if(alu_less==1) npc_op = 1;
                 //3'b110: if(alu_zero) npc_op = 1; TODO:bltu
-                3'b101: if(~alu_less) npc_op = 1;
+                3'b101: if(alu_less==0) npc_op = 1;
                 //3'b111: if(alu_zero) npc_op = 1; TODO:bgeu
             endcase
+        end
+        7'b0110111: begin //U-type for lui 
+            alua_sel = 0; 
+            alub_sel = 0;       
+            alu_op   = 0;
+            dram_we  = 0;
+            npc_op   = 0;
+            rf_we    = 1; 
+            wd_sel   = `RF_MUX_sext;
+        end
+        7'b0010111: begin //U-type for auipc TODO
+        
+        end
+        7'b1101111: begin //J-type
+            alua_sel = 0; 
+            alub_sel = 0;       
+            alu_op   = 0;
+            dram_we  = 0;
+            npc_op   = 1;
+            rf_we    = 1; 
+            wd_sel   = `RF_MUX_pc4;
         end
     endcase
 end                

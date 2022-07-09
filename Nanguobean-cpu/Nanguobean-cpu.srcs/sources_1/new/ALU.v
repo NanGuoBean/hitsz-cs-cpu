@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "param.v"  
 module ALU(
     input [3:0] alu_op,
     input [31:0] A,
