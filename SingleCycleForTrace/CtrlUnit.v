@@ -5,6 +5,7 @@ module CtrlUnit(
     //ALU
     input alu_less,     
     input alu_zero, 
+    input alu_nless,
     output reg alua_sel,
     output reg alub_sel, //output reg ALUsrc,
     output reg [3:0] alu_op, //output reg [3:0] ALUop,
@@ -116,9 +117,9 @@ always@(*) begin
                 3'b000: if(alu_zero==1) npc_op = 1;
                 3'b001: if(alu_zero==0) npc_op = 1;
                 3'b100: if(alu_less==1) npc_op = 1;
-                //3'b110: if(alu_zero) npc_op = 1; TODO:bltu
+                3'b110: if(alu_nless==1) npc_op = 1;     //TODO:bltu
                 3'b101: if(alu_less==0) npc_op = 1;
-                //3'b111: if(alu_zero) npc_op = 1; TODO:bgeu
+                3'b111: if(alu_nless==0) npc_op = 1;     //TODO:bgeu
             endcase
         end
         7'b0110111: begin //U-type for lui 
@@ -131,7 +132,13 @@ always@(*) begin
             wd_sel   = `RF_MUX_sext;
         end
         7'b0010111: begin //U-type for auipc TODO
-        
+            alua_sel = 1; 
+            alub_sel = 1;       
+            alu_op   = `ADD;
+            dram_we  = 0;
+            npc_op   = 0;
+            rf_we    = 1; 
+            wd_sel   = `RF_MUX_alu;
         end
         7'b1101111: begin //J-type
             alua_sel = 0; 

@@ -34,7 +34,7 @@ wire [2:0] func3 = irom_inst_w[14:12];
 //ALU
 wire clk;
 wire [31:0] aluMux_A_w, aluMux_B_w;
-wire alu_zero_w, alu_less_w;
+wire alu_zero_w, alu_less_w,alu_Nless_w;
 wire [31:0] alu_res_w;
 //Ctrl
 
@@ -87,6 +87,7 @@ ALU alu(
     .B          (aluMux_B_w),
     .zero       (alu_zero_w),
     .less       (alu_less_w),
+    .Nless      (alu_Nless_w),
     .res        (alu_res_w)
 );
 
@@ -95,10 +96,12 @@ CtrlUnit ctrl(
     .inst       (irom_inst_w),
     //ALU
     .alu_less   (alu_less_w),     
+    .alu_nless  (alu_Nless_w),
     .alu_zero   (alu_zero_w),
     .alua_sel   (ctrl_alua_sel_w),
     .alub_sel   (ctrl_alub_sel_w), 
-    .alu_op      (ctrl_ALUop_w),
+    .alu_op     (ctrl_ALUop_w),
+    
     //DRAM
     .dram_we    (ctrl_dram_we_w), 
     //NPC
